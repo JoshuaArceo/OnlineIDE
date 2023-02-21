@@ -24,7 +24,7 @@
         echo $output;
     }
     if($language == "python") {
-        $output = shell_exec("python3 $filePath 2>&1");
+        $output = shell_exec("python $filePath 2>&1");
         echo $output;
     }
     if($language == "javascript") {

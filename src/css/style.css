@@ -10,6 +10,10 @@
     font-family: sans-serif;
 }
 
+.body{
+    background: #2d2d2d;
+}
+
 .control-panel {
     color: white;
     background: #2d2d2d;
@@ -23,7 +27,10 @@
     border: 1px solid gray;
 }
 
-#editor { height: 700px; }
+#editor {
+    height: 450px;
+    resize: vertical;
+}
 
 .button-container {
     text-align: right;
@@ -39,11 +46,61 @@
 }
 
 .output {
+    overflow: auto;
+    white-space: pre-wrap;
+    color: white;
     padding: 4px;
     border: 2px solid gray;
     min-height: 100px;
+    max-height: 130px;
     width: 99%;
-    resize: none;
     background: #2d2d2d;
+    resize: vertical;
+}
 
+.accordion-item{
+    background: #2d2d2d;
+    color: white;
+    border: none !important;
+}
+.accordion-header{
+    background: #2d2d2d;
+    color: white;
+}
+.accordion-button{
+    background: #2d2d2d;
+    color: white;
+}
+.accordion-collapse.collapsed{
+    background: #2d2d2d;
+    color: white;
+}
+.accordion-button:not(.collapsed){
+    background: #2d2d2d;
+    color: white;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg)
+}
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+.problem_link{
+    font-size: 12.5px;
+}
+.codebox {
+    /* Below are styles for the codebox (not the code itself) */
+    border:1px solid black;
+    background-color:#2d2d2d;
+    width:300px;
+    overflow: visible;
+    padding:10px;
+}
+.codebox code {
+    /* Styles in here affect the text of the codebox */
+    font-size:0.9em;
+    color: white;
+    /* You could also put all sorts of styling here, like different font, color, underline, etc. for the code. */
 }
